@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Your deck.js Presentation</title>
+  <title>Storybook JS</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" media="screen" href="core/deck.core.css">
@@ -17,8 +17,10 @@
   <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
   <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,900&display=swap" rel="stylesheet">
+
   <!-- Style theme. More available in /themes/style/ or create your own. -->
-  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+  <link rel="stylesheet" media="screen" href="themes/style/haaf.css">
 
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
@@ -35,16 +37,59 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
-      <h1>Slide</h1>
+      <h1>🏰 Storybook JS</h1>      
     </section>
 
     <section class="slide">
-      <h1>Content</h1>
+      <h2>What Is It?</h2>
+      <p>An open source tool for <mark>developing UI components in isolation.</mark></p>
     </section>
 
     <section class="slide">
-      <h1>Here</h1>
+      <h2>Why Use It?</h2>
+      <ul>
+        <li>Gives you a <mark>bird's eye view</mark> of your component library</li>
+        <li>Demo all use cases without having to manipulate data (even hard to reach use cases</li>
+      </ul>
     </section>
+
+    <section class="slide">
+        <h2>How To Use It?</h2>
+        <ul>
+          <li>Options for quick start or manual install with most JS frameworks/libraries</li>
+           <li>Install as a project dependency</li>
+          <li>Set up your story files</li>
+          <li>Deploy storybook as a static site to share with your whole team</li>
+        </ul>
+     </section>
+
+
+     <section class="slide">
+        <h2>Config</h2>
+        <code>import { configure } from '@storybook/react';
+          import '../src/App.css';
+          
+          function loadStories() {
+              require('../stories/index.js');
+            }
+            
+          configure(loadStories, module);
+        </code>
+     </section>
+
+
+     <section class="slide">
+        <h2>Add Ons</h2>
+        <p>There are a variety of plugins to add functionality to Storybook UI</p>
+        <ul>
+          <li><mark>Knobs</mark> edit component props dynamically within the Storybook UI</li>
+          <li><mark>Actions</mark> display data received by event handlers</li>
+          <li><mark>Storyshots</mark> works with Jest to take snapshots of your stories</li>
+           <li><mark>Notes</mark> add detailed components notes using markdown</li>
+           <li><mark>Accessibility:</mark> test component compliance with web accessibility standards</li>
+           <li><mark>COMING SOON</mark> generate styleguide using markdown</li>
+        </ul>
+      </section>
 
     <!-- End slides. -->
 
