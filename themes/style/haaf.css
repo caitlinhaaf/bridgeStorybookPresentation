@@ -324,16 +324,25 @@ h3 {
 }
 
 pre {
-  border-color: #ccc;
+    color: #888;
+    border: 3px solid #999;
+    /* display: block; */
+    /* padding: 1rem; */
+
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;}
 }
 
 
 code {
     color: #888;
-    white-space: pre-line;
-    border: 3px solid #999;
-    display: block;
-    padding: 1rem;
+    /* white-space: pre-line; */
+    /* white-space: pre; */
+    /* border: 3px solid #999; */
+    /* display: block;
+    padding: 1rem; */
   }
 
 blockquote {

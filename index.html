@@ -45,49 +45,76 @@
     </section>
 
     <section class="slide">
+      <img
+         style="margin: 1rem auto;"
+         src="assets/storybookSiteExample.png" alt="Storybook JS dashboard image"/>
+    </section>
+
+    <section class="slide">
       <h2>What Is It?</h2>
-      <p>An open source tool for <mark>developing UI components in isolation.</mark></p>
+      <ul>
+        <li>An open source tool for <mark>developing UI components in isolation.</mark></li>
 
-      <p>Provides a UI where you can search through and preview your component library.</p>
+        <li>Provides a UI where you can <mark>search through and preview</mark> your component library.</li>
 
-      <p>Compatible with a variety of libaries including: <mark>React, React Native, Vue, Angular, Ember, Svelte, Mithril, and plain ol' HTML</mark></p>
+        <li>Compatible with a variety of libaries including <mark>React, React Native, Vue, Angular, Ember, Svelte, Mithril, and plain ol' HTML</mark>.</li>
+
+      </ul>
     </section>
 
     <section class="slide">
       <h2>Why Use It?</h2>
       <ul>
-        <li>Gives you a <mark>bird's eye view</mark> of your component library</li>
-        <li>Preview components without having to locate them throughout the app, or load them into a page</li>
-        <li>Demo all use cases without having to manipulate data (even hard to reach use cases)</li>
+        <li>Gives you a <mark>bird's eye view</mark> of your component library, with all of your components in a <mark>centralized location</mark></li>
+
+        <li>Demo <mark>all states and use cases</mark> without having to manipulate data (even hard to reach use cases)</li>
+
+        <li>Storybook can be <mark>deployed as a static site</mark> and easily shared with the entire team</li>
+
       </ul>
     </section>
 
     <section class="slide">
         <h2>How To Use It?</h2>
         <ul>
-          <li>Add to your project, and set up your .storybook/config</li>
-          <li>Write your story files, setting up a storiesOf for each component</li>
-          <li>Run locally, or use to generate a static site that can be posted for your whole team to access</li>
+          <li>Set up your <mark>.storybook/config.js</mark></li>
+
+          <li>If you are using any "addons", import them into <mark>.storybook/addons.js</mark></li>
+
+          <li>Build out your storybook by <mark>writing stories for each component</mark>. Stories are functions that return the rendered component - each story represents a <mark>single possible state of a component</mark></li>
+
+          <li>Story files can be placed anywhere - are usually <mark>grouped with other component files, or in a stories directory</mark></li>
+
         </ul>
      </section>
 
      <section class="slide">
         <h2>Config</h2>
-        <code>import { configure } from '@storybook/react';
-          import '../src/App.css';
-          
-          function loadStories() {
-              require('../stories/index.js');
-            }
-            
-          configure(loadStories, module);
-        </code>
+        <pre>
+            <code type="text/javascript">
+import { configure } from '@storybook/react';
+import '../src/App.css';
+                
+function loadStories() {
+  require('../stories/index.js');
+}
+                  
+configure(loadStories, module);
+            </code>
+        </pre>
+        
      </section>
 
      <section class="slide">
-        <h2>Let's Look At Some Code!</h2>
-     </section>
+        <h2>Addons</h2>
+        <pre>
+            <code>
+import '@storybook/addon-actions/register';
+import '@storybook/addon-knobs/register';
+             </code>
+        </pre>
 
+     </section>
 
      <section class="slide">
         <h2>Add Ons</h2>
@@ -96,17 +123,23 @@
           <li><mark>Knobs</mark> edit component props dynamically within the Storybook UI</li>
           <li><mark>Actions</mark> display data received by event handlers</li>
           <li><mark>Storyshots</mark> works with Jest to take snapshots of your stories</li>
-           <li><mark>Notes</mark> add detailed components notes using markdown</li>
-           <li><mark>Accessibility:</mark> test component compliance with web accessibility standards</li>
+          <li><mark>Notes</mark> add detailed components notes using markdown</li>
+          <li><mark>Accessibility:</mark> test component compliance with web accessibility standards</li>
         </ul>
+
+        <p>There is even an <mark>API for developing your own addons.</mark></p>
       </section>
+
+     <section class="slide">
+        <h2>Let's Look At Some Code!</h2>
+        <img src="assets/storybookBridgeExample.png" alt="Storybook JS dashboard of sample project" style="margin: 1rem auto;"/>
+     </section>
 
       <section class="slide">
           <h2>What It's Not</h2>
-          <p>Storybook is primarily a <mark>development tool</mark>, used when building your component library. It currently does not offer features that allow for building more robust styleguide documentation.</p>
+          <p>Storybook is primarily a <mark>development tool</mark> used when building your component library. It currently does not offer features that allow for building more robust styleguide documentation.</p>
 
           <p><mark>HOWEVER</mark> they have announced they are currently working on a feature that would generate styleguide documentation using markdown.</p>
-
        </section>
 
       <section class="slide">
@@ -114,16 +147,14 @@
 
         <ul>
           <li>
-            <a href="https://github.com/caitlinhaaf/personal-project-react">
-              Bridge Personal Project with Storybook
-            </a>
-            <span style="font-style: italic;"> My Git Repo</span>
+            <a href="https://github.com/caitlinhaaf/personal-project-react" target="_blank">Bridge Personal Project with Storybook Repo</a><span style="font-style: italic;"></span>
+          </li>
+          <li><a href="https://storybook.js.org/docs/basics/introduction/" target="_blank">Storybook Documentation</a></li>
+          <li>
+            <a href="https://storybook.js.org/docs/addons/api/" target="_blank">Storybook Addon Development API Documentaion</a>
           </li>
           <li>
-            <a href="https://blog.hichroma.com/storybook-vs-styleguidist-2bd93d6dcc06">
-              Storybook vs Styleguidist
-            </a>
-            <span style="font-style: italic;"> Dominic Nguyen</span>
+            <a href="https://blog.hichroma.com/storybook-vs-styleguidist-2bd93d6dcc06" target="_blank">Storybook vs Styleguidist</a><span style="font-style: italic;"> by Dominic Nguyen</span>
           </li>
 
         </ul>
@@ -131,7 +162,7 @@
       </section>
 
       <section class="slide">
-        <h1>Questions?</h1>
+        <h1>🤷🏻‍ Questions?</h1>
       </section>
 
     <!-- End slides. -->
