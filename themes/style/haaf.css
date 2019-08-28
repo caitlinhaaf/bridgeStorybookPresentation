@@ -169,12 +169,6 @@ select, input, textarea {
   color: #444444;
 }
 
-a {
-  color: #607890;
-}
-a:hover, a:focus {
-  color: #036;
-}
 a:link {
   -webkit-tap-highlight-color: #fff;
 }
@@ -191,7 +185,7 @@ h1 {
   font-size: 3em;
   font-family: 'Nunito Sans', sans-serif;
   /* background-color: hotpink; */
-  /* color: hotpink; */
+  color: hotpink;
 
   /* display: inline; */
   /* background-image: linear-gradient(#fff 60%, hotpink 55%); */
@@ -240,6 +234,7 @@ h2 {
   font-size: 2em;
   font-weight: bold;
   padding-top: .5em;
+  padding-left: 2rem;
   margin: 0 0 .66666em 0;
   background-image: linear-gradient(#fff 60%, hotpink 55%);
 
@@ -332,15 +327,13 @@ pre {
   border-color: #ccc;
 }
 
-code {
-  color: #888;
-}
 
 code {
+    color: #888;
     white-space: pre-line;
     border: 3px solid #999;
     display: block;
-    /* padding: 2rem; */
+    padding: 1rem;
   }
 
 blockquote {
@@ -372,7 +365,7 @@ blockquote cite {
 
 a, a:hover, a:focus, a:active, a:visited {
   color: hotpink;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 a:hover, a:focus {
   text-decoration: underline;
