@@ -52,14 +52,16 @@
 
     <section class="slide">
       <h2>What Is It?</h2>
-      <ul>
-        <li>An open source tool for <mark>developing UI components in isolation.</mark></li>
+      <!-- <ul> -->
+        <p>An open source tool for <mark>developing UI components in isolation.</mark></p>
 
-        <li>Provides a UI where you can <mark>search through and preview</mark> your component library.</li>
+        <p>Provides a UI where you can <mark>search through and preview</mark> your component library.</p>
 
-        <li>Compatible with a variety of libaries including <mark>React, React Native, Vue, Angular, Ember, Svelte, Mithril, and plain ol' HTML</mark>.</li>
+        <p>Compatible with a variety of libaries including <mark>React, React Native, Vue, Angular, Ember, Svelte, Mithril, and plain ol' HTML</mark>.</p>
 
-      </ul>
+        <img src="assets/storybookIntro.gif" alt="Animation demonstrating Storybook JS work"/>
+      <!-- </ul> -->
+      
     </section>
 
     <section class="slide">
@@ -77,43 +79,18 @@
     <section class="slide">
         <h2>How To Use It?</h2>
         <ul>
-          <li>Set up your <mark>.storybook/config.js</mark></li>
+          <li>Set up your <code>.storybook/config.js</code></li>
 
-          <li>If you are using any "addons", import them into <mark>.storybook/addons.js</mark></li>
+          <li>If you are using any "addons", import them into <code>.storybook/addons.js</code></li>
 
-          <li>Build out your storybook by <mark>writing stories for each component</mark>. Stories are functions that return the rendered component - each story represents a <mark>single possible state of a component</mark></li>
+          <li>Build out your storybook by <mark>writing stories for each component</mark>. Stories are functions that return the rendered component - each story represents a <mark>single possible state of a component</mark> (unless using an addon like knobs)</li>
 
-          <li>Story files can be placed anywhere - are usually <mark>grouped with other component files, or in a stories directory</mark></li>
+          <li>Story files can be placed anywhere - they are usually <mark>grouped with other component files, or in a stories directory</mark></li>
 
+          <li>Run your storybook locally with the command <code>npm run storybook</code></li>
+
+          <li>Storybook will <mark>update anytime you save</mark> an associated component file</li>
         </ul>
-     </section>
-
-     <section class="slide">
-        <h2>Config</h2>
-        <pre>
-            <code type="text/javascript">
-import { configure } from '@storybook/react';
-import '../src/App.css';
-                
-function loadStories() {
-  require('../stories/index.js');
-}
-                  
-configure(loadStories, module);
-            </code>
-        </pre>
-        
-     </section>
-
-     <section class="slide">
-        <h2>Addons</h2>
-        <pre>
-            <code>
-import '@storybook/addon-actions/register';
-import '@storybook/addon-knobs/register';
-             </code>
-        </pre>
-
      </section>
 
      <section class="slide">
@@ -123,7 +100,7 @@ import '@storybook/addon-knobs/register';
           <li><mark>Knobs</mark> edit component props dynamically within the Storybook UI</li>
           <li><mark>Actions</mark> display data received by event handlers</li>
           <li><mark>Storyshots</mark> works with Jest to take snapshots of your stories</li>
-          <li><mark>Notes</mark> add detailed components notes using markdown</li>
+          <li><mark>Notes</mark> add detailed component notes; useful for reviews</li>
           <li><mark>Accessibility:</mark> test component compliance with web accessibility standards</li>
         </ul>
 
@@ -155,6 +132,12 @@ import '@storybook/addon-knobs/register';
           </li>
           <li>
             <a href="https://blog.hichroma.com/storybook-vs-styleguidist-2bd93d6dcc06" target="_blank">Storybook vs Styleguidist</a><span style="font-style: italic;"> by Dominic Nguyen</span>
+          </li>
+
+          <li>
+            <a href="https://medium.com/better-programming/using-storybook-as-a-powerful-visual-testing-platform-3b71db953b4b">
+              Storybook as a Visual Testing Platform
+            </a><span style="font-style: italic;"> by Emanuel Suriano</span>
           </li>
 
         </ul>
